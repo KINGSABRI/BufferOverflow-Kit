@@ -16,7 +16,7 @@ If you are a buffer overflow guy, then may you like to contriute and develop wit
 
 *How to use?*
 --------------
-Make sure your ruby is install.
+Make sure ruby is installed.
 
 **Required gems**
 
