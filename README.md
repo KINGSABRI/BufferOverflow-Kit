@@ -16,7 +16,13 @@ If you are a buffer overflow guy, then may you like to contriute and develop wit
 
 *How to use?*
 --------------
-make sure your ruby is install
+Make sure your ruby is install.
+
+**Required gems**
+	gem install pry colorize
+
+
+
 
 **Help**
 
