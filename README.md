@@ -14,7 +14,7 @@ What BufferOverflow Kit contain?
 * Convert Binary file to Hex raw
 * and more ,,
 
-*How to use?*
+How to use?
 --------------
 Make sure ruby is installed.
 
