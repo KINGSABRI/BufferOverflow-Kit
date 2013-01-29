@@ -1,0 +1,45 @@
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ruby bofk-cli.rb -h 
+
+ruby bofk-cli.rb --pattern-create 200
+
+ruby bofk-cli.rb --pattern-offset Aa1V
+
+ruby bofk-cli.rb --hex2lend  0x41424344
+
+ruby bofk-cli.rb --hex2lend  \x41\x42\x43\x44
+
+
+
