@@ -43,7 +43,7 @@ make sure your ruby is install
 	ruby bofk-cli.rb --pattern-offset GAa0
 	27
 
-*Convert to little endian*
+**Convert to little endian**
 
 	ruby bofk-cli.rb -e \x41\x\42\x\43\x44
 	\x44\x43\x42\x41
