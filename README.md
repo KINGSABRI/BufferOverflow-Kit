@@ -33,10 +33,12 @@ make sure your ruby is install
 	    -h, --help                       Display this screen 
 
 Pattern create 
+
 	bofk-cli.rb --pattern-create 50
 	Aa0AAa0BAa0CAa0DAa0EAa0FAa0GAa0HAa0IAa0JAa0KAa0LAa
 
-Pattern offset 
+Pattern offset
+
 	ruby bofk-cli.rb --pattern-offset GAa0
 	27
 
