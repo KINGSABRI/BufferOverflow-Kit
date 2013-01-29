@@ -48,7 +48,7 @@ optparse = OptionParser.new do|opts|
   #--> Display the help screen
   opts.banner = "Usage:\n" + 
 		"ruby bofk-cli.rb --pattern-create 500\n" 		+
-		"ruby bofk-cli.rb --pattern-offset 5F343D3E\n" 		+
+		"ruby bofk-cli.rb --pattern-offset Aa4Z\n" 		+
 		"ruby bofk-cli.rb --hex2endl 0x41F2E377\n"		+
 		"ruby bofk-cli.rb --hex2bin input.txt output.bin\n" 	+
 		"ruby bofk-cli.rb --bin2hex input.bin output.txt\n\n"
