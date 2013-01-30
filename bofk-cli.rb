@@ -8,8 +8,8 @@ bin2hex
 =end
 
 APP_ROOT	= Dir.pwd
-ROOT		= $:.unshift(File.join(APP_ROOT, "bin"))
-LIB		= "#{APP_ROOT}/lib"
+ROOT		= $:.unshift(File.join(APP_ROOT, "lib"))
+BIN		= "#{APP_ROOT}/bin"
 OUT		= "#{APP_ROOT}/out"
 
 
@@ -58,7 +58,7 @@ optparse = OptionParser.new do|opts|
     exit
   end
 end
-optparse.parse!
+optparse.parse! #(ARGV)
 options
 ARGV
 
@@ -87,8 +87,7 @@ when options[:hex2endl]
 #--> Hex to bin
 when options[:hex2bin]
   then
-	#ss = gets 
-	#@hex2bin.shellcode(gets.chomp)
+   p options[:hex2bin]
    @hex2bin.shellcode(options[:hex2bin])
    @hex2bin.to_bin
 

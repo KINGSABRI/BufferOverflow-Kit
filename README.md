@@ -2,9 +2,9 @@ BufferOverflow-Kit
 ==================
 
 We collect many tools used in buffer overflow development in one place, repeating with new idea is not a shame - thanks China :)
-If you are a buffer overflow guy, then may you like to contriute and develop with us more tools in one place.
+If you are a buffer overflow guy, then may you like to contribute and develop with us ALL your tools in ONE place.
 
-*What BufferOverflow Kit contain*
+What BufferOverflow Kit contain?
 ---------------------------------
 * Commandline and Console base.
 * pattern create (like metasploit pattern_create script)
@@ -14,9 +14,17 @@ If you are a buffer overflow guy, then may you like to contriute and develop wit
 * Convert Binary file to Hex raw
 * and more ,,
 
-*How to use?*
+How to use?
 --------------
-make sure your ruby is install
+Make sure ruby is installed.
+
+**Required gems**
+
+	gem install pry colorize
+
+
+
+
 **Help**
 
 	ruby bofk-cli.rb -h
