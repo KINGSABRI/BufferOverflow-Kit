@@ -19,6 +19,7 @@ https://github.com/rapid7/metasploit-framework/blob/master/data/msfpescan/identi
 https://github.com/rapid7/metasploit-framework/tree/master/lib/metasm
 https://github.com/jjyg/metasm
 
+[+] nasm					pending			add nasm.exe as a tool to compile asm files 
 
 
 
