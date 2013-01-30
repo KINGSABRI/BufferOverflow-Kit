@@ -12,6 +12,7 @@ What BufferOverflow Kit contain?
 * Hex to Little endian chracter (ex. \x41\x\42\x\43\x44 to \x44\x43\x42\x41)
 * Convert Hex shellcode to Binary file
 * Convert Binary file to Hex raw
+* Find jmp,call and pop pop ret address from (exe, dll) files (like msfpescan)
 * and more ,,
 
 How to use?
