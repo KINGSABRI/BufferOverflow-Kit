@@ -13,7 +13,7 @@ What BufferOverflow Kit contain?
 * Convert Hex shellcode to Binary file
 * Convert Binary file to Hex raw
 * Find jmp,call and pop pop ret address from (exe, dll) files (like msfpescan)
-* Adding nasm.exe as external too 
+* Adding nasm.exe as external tool 
 * and more ,,
 
 How to use?
