@@ -10,7 +10,7 @@
 
 [+] Hex 2 bin					progress		issue: take "\x41" from stdin as it-is 
 
-[+] Bin 2 hex					pending 
+[+] Bin 2 hex					DONE			I need to add file check, later 
 
 [+] msfpescan  					pending			metasm/msfpescan
 https://github.com/rapid7/metasploit-framework/blob/master/msfpescan
