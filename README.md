@@ -35,7 +35,7 @@ Make sure ruby is installed.
 	ruby bofk-cli.rb --pattern-offset Aa4Z
 	ruby bofk-cli.rb --hex2endl 0x41F2E377
 	ruby bofk-cli.rb --hex2bin input.txt output.bin
-	ruby bofk-cli.rb --bin2hex input.bin output.txt
+	ruby bofk-cli.rb --bin2hex input.bin
 	
 	    -c, --pattern-create LENGTH      Create Unique pattern string
 	    -o, --pattern-offset OFFSET      Find Pattern offset string.
