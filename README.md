@@ -22,7 +22,7 @@ Make sure ruby is installed.
 
 **Required gems**
 
-	gem install pry colorize
+	gem install pry
 
 
 
