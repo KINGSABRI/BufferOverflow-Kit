@@ -99,8 +99,12 @@ when options[:offset]
 #--> Hex to little endian characters converter
 when options[:hex2endl]
   then
-    @hex2lendian = Hex2littleEndian.new(options[:hex2endl])
-    puts @hex2lendian.to_Lendian
+   decor = util_etc.decorate("Little endian format")
+   puts "#{decor[:head]}".light_blue + "#{decor[:title]}".white + "#{decor[:tail]}".light_blue
+   @hex2lendian = Hex2littleEndian.new(options[:hex2endl])
+   puts @hex2lendian.to_Lendian
+   puts "#{decor[:end]}".light_blue
+   puts ""
 
 #--> Hex to bin
 when options[:hex2bin]
