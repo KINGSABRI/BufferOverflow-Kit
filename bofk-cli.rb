@@ -17,6 +17,7 @@ require	'pry'
 require	'pattern'
 require	'hex2lendian'
 require 'hex2bin'
+require 'bin2hex'
 require 'optparse'
 require 'pp'
 
@@ -42,7 +43,7 @@ optparse = OptionParser.new do|opts|
     options[:hex2bin] = h2b
   end
   #--> bin to Hex
-  opts.on('-x', '--bin2hex', "Convert binary shellcode to Hex string.") do |bin2hex|
+  opts.on('-x', '--bin2hex BINARY_FILE', "Convert binary shellcode to Hex string.") do |bin2hex|
     options[:bin2hex] = bin2hex
   end
   #--> Display the help screen
@@ -65,18 +66,19 @@ ARGV
 
 @pattern  = Pattern.new
 @hex2bin  = Hex2Bin.new()
+@bin2hex  = Bin2Hex.new
 
 case
 
 #--> Pattern create 
 when options[:create]
   then
-  puts @pattern.create(options[:create])
+    puts @pattern.create(options[:create])
 
 #--> Pattern offset
 when options[:offset]
   then
-  puts @pattern.offset(options[:offset])	  # TODO:  make offset can take 2 ARGS
+    puts @pattern.offset(options[:offset])	  # TODO:  make offset can take 2 ARGS
 
 #--> Hex to little endian characters converter
 when options[:hex2endl]
@@ -94,7 +96,10 @@ when options[:hex2bin]
 #--> bin to Hex
 when options[:bin2hex]
   then
-    puts "bin2hex : to be solved"
+  puts "\n\n"
+  @bin2hex.read(options[:bin2hex])
+  puts @bin2hex.to_hex
+  puts "\n\n"
 else
   puts "WTF!!!"
 end
