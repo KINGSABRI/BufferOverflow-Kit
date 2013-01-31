@@ -1,0 +1,29 @@
+==================================================================================================
+	    Todo			|	Status		|	Comments
+==================================================================================================
+
+[+] Pattern					DONE
+  - pattern create				DONE 
+  - pattern offset				DONE
+
+[+] Little endian characters 			DONE
+
+[+] Hex 2 bin					progress		issue: take "\x41" from stdin as it-is 
+
+[+] Bin 2 hex					DONE			I need to add file check, later 
+
+[+] msfpescan  					pending			metasm/msfpescan
+https://github.com/rapid7/metasploit-framework/blob/master/msfpescan
+https://github.com/rapid7/metasploit-framework/tree/master/lib/rex/pescan
+https://github.com/rapid7/metasploit-framework/blob/master/data/msfpescan/identify.txt
+https://github.com/rapid7/metasploit-framework/tree/master/lib/metasm
+https://github.com/jjyg/metasm
+
+[+] nasm					pending			add nasm.exe as a tool to compile asm files 
+
+[+] Colorize outputs				DONE			
+
+
+
+
+ 
