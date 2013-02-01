@@ -113,11 +113,13 @@ case
   then
 	decor = decoration.decorate("Hex to Binary")
 	puts "#{decor[:head]}".light_blue + "#{decor[:title]}".white + "#{decor[:tail]}".light_blue
-	p options[:hex2bin]
-	@hex2bin.shellcode(options[:hex2bin])
-	@hex2bin.to_bin
+	#p options[:hex2bin]
+	#@hex2bin.shellcode(options[:hex2bin])
+	#@hex2bin.to_bin
+	puts "This function is not working currently!"
 	puts "#{decor[:end]}".light_blue
 	puts ""
+	exit
 
 #--> bin to Hex
   when options[:bin2hex]
