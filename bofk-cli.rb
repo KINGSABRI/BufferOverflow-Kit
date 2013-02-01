@@ -6,14 +6,14 @@ https://github.com/KINGSABRI/BufferOverflow-Kit
 =end
 
 APP_ROOT	= Dir.pwd
-GEMS		= $:.unshift File.join(APP_ROOT,'gems')
 ROOT		= $:.unshift(File.join(APP_ROOT,'lib'))
+GEMS		= "#{APP_ROOT}/gems"
 BIN			= "#{APP_ROOT}/bin"
 OUT			= "#{APP_ROOT}/out"
 
 
 require	'pry'
-require 'colorize'
+require "#{GEMS}/colorize-0.5.8/lib/colorize"
 require	'pattern'
 require	'hex2lendian'
 require 'hex2bin'
