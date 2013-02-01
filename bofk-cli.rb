@@ -33,7 +33,7 @@ optparse = OptionParser.new do|opts|
 	options[:create] = c
   end
   #--> Pattern offset
-  opts.on('-o', '--pattern-offset OFFSET', "Find Pattern offset string.") 		 	do |o|
+  opts.on('-o', '--pattern-offset OFFSET', "Find Pattern offset string.") 		 do |o|
 	options[:offset] = o
   end
   #--> Hex to little endian characters converter
@@ -49,12 +49,12 @@ optparse = OptionParser.new do|opts|
 	options[:bin2hex] = bin2hex
   end
   #--> Display the help screen
-  opts.banner = "Usage: ruby bofk-cli.rb [OPTIONS] ARGUMENT\n" 	+
-	  "ex."													+
+  opts.banner = "Usage: ruby bofk-cli.rb {OPTIONS} ARGUMENT\n" 	+
+	  "ex."									+
 	  "ruby bofk-cli.rb --pattern-create 500\n" 				+
 	  "ruby bofk-cli.rb --pattern-offset Aa4Z\n" 				+
 	  "ruby bofk-cli.rb --hex2endl 0x41F2E377\n"				+
-	  "ruby bofk-cli.rb --hex2bin input.txt output.bin\n" 	+
+	  "ruby bofk-cli.rb --hex2bin input.txt output.bin\n" 			+
 	  "ruby bofk-cli.rb --bin2hex input.bin\n\n"
 
   opts.on( '-h', '--help', "Display this screen \n" ) do
