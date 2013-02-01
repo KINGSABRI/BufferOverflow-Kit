@@ -24,12 +24,9 @@ require 'optparse'
 require 'pp'
 require 'utils'
 
-$titlef = "---[ ".light_blue
-$plusG  = "[+] ".green
-
-options = {}
 
 
+options  = {}
 optparse = OptionParser.new do|opts|
   #--> Pattern create
   opts.on('-c' , '--pattern-create LENGTH', "Create Unique pattern string") 		do |c|
