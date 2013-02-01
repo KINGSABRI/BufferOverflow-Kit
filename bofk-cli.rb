@@ -55,7 +55,7 @@ optparse = OptionParser.new do|opts|
 	  "ruby bofk-cli.rb --pattern-offset Aa4Z\n" 				+
 	  "ruby bofk-cli.rb --hex2endl 0x41F2E377\n"				+
 	  "ruby bofk-cli.rb --hex2bin input.txt output.bin\n" 	+
-	  "ruby bofk-cli.rb --bin2hex input.bin output.txt\n\n"
+	  "ruby bofk-cli.rb --bin2hex input.bin\n\n"
 
   opts.on( '-h', '--help', "Display this screen \n" ) do
 	puts opts
@@ -130,7 +130,10 @@ case
 	puts ""
 
   else
-	puts "ruby bofk-cli.rb --help\n\n"
+    decor = decoration.decorate("Help screen")
+    puts "#{decor[:head]}".light_blue + "#{decor[:title]}".white + "#{decor[:tail]}".light_blue
+    puts "#{optparse}"
+    puts "#{decor[:end]}".light_blue
 end
 
 
