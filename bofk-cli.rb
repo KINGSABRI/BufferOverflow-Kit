@@ -31,11 +31,11 @@ begin
   optparse = OptionParser.new do|opts|
 	opts.separator "Help menu:".underline
 	#--> Pattern create
-	opts.on('-c' , '--pattern-create LENGTH', "Create Unique pattern string.") 			do |c|
+	opts.on('-c' , '--pattern-create LENGTH', "Create Unique pattern string.") 		do |c|
 	  options[:create] = c
 	end
 	#--> Pattern offset
-	opts.on('-o', '--pattern-offset OFFSET', "Find Pattern offset string.") 		 	do |o|
+	opts.on('-o', '--pattern-offset OFFSET', "Find Pattern offset string.") 		do |o|
 	  options[:offset] = o
 	end
 	#--> Hex to little endian characters converter
@@ -51,20 +51,20 @@ begin
 	  options[:bin2hex] = bin2hex
 	end
 	#--> Version
-	opts.on('-V', '--version', 'Display BufferOver flow Kit version.')					do |v|
+	opts.on('-V', '--version', 'Display BufferOver flow Kit version.')			do |v|
 	  options[:version] = v
 	end
 	#--> Help screen
-	opts.banner = "\nUsage:".underline 							+
+	opts.banner = "\nUsage:".underline 						+
 		" ruby bofk-cli.rb {OPTIONS} ARGUMENT\n" 				+
-		"\nExamples:\n".underline								+
+		"\nExamples:\n".underline						+
 		"ruby bofk-cli.rb --pattern-create 500\n" 				+
 		"ruby bofk-cli.rb --pattern-offset Aa4Z\n" 				+
 		"ruby bofk-cli.rb --hex2endl 0x41F2E377\n"				+
-		"ruby bofk-cli.rb --hex2bin input.txt output.bin\n" 	+
+		"ruby bofk-cli.rb --hex2bin input.txt output.bin\n" 			+
 		"ruby bofk-cli.rb --bin2hex input.bin\n\n"
 
-	opts.on( '-h', '--help', "Display this screen \n" ) 								do
+	opts.on( '-h', '--help', "Display this screen \n" ) 					do
 	  decor = decoration.decorate("Help screen")
 	  puts "#{decor[:head]}".light_blue + "#{decor[:title]}".white + "#{decor[:tail]}".light_blue
 	  puts "#{opts}"
