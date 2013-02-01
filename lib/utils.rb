@@ -6,24 +6,6 @@ https://github.com/cldwalker/hirb/blob/master/lib/hirb/util.rb#L61-71
 class BofKUtils
 
 
-  #class FilesFolders
-  #
-  #  #def exist?(file)
-  #	#case
-  #	#  when File.exist?(file) == true
-  #	#	puts true
-  #	#  when File.exist? file == false
-  #	#	puts "[+] Error!: #{file} : No such file or directory"
-  #	#end
-  #  #end
-  #
-  #  def readable?
-  #
-  #  end
-  #
-  #end	# FilesFolders
-
-
   class Decoration
 
 	attr_reader :terminal_size , :mark
@@ -53,11 +35,8 @@ class BofKUtils
 	end
 
 	def mark
-
 	  mark = { :+ => "[+] ".green , :- => "[-] " , :! => "[!] ".yellow }
-
 	end
-
 
   end
 
