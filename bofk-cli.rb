@@ -12,7 +12,7 @@ BIN			= "#{APP_ROOT}/bin"
 OUT			= "#{APP_ROOT}/out"
 
 
-require	'pry'
+#require	'pry'
 require "#{GEMS}/colorize-0.5.8/lib/colorize"
 require	'pattern'
 require	'hex2lendian'
