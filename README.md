@@ -18,7 +18,8 @@ What BufferOverflow Kit contain?
 
 How to use?
 --------------
-Make sure ruby is installed.
+Make sure ruby is installed. 
+Tested on Ruby 1.9.3 only
 
 **Required gems**
 
