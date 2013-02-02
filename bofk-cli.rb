@@ -12,8 +12,7 @@ BIN			= "#{APP_ROOT}/bin"
 OUT			= "#{APP_ROOT}/out"
 
 
-#require	'pry'
-require "#{GEMS}/colorize-0.5.8/lib/colorize"
+require "#{GEMS}/colorize-0.5.8/lib/colorize.rb"
 require	'pattern'
 require	'hex2lendian'
 require 'hex2bin'
@@ -43,17 +42,17 @@ begin
 	  options[:hex2endl] = h2le
 	end
 	#--> Hex to bin
-	opts.on('-b', '--hex2bin HEX_STRING', "Convert Hex shellcode to binary file.") 		do |h2b|
-	  options[:hex2bin] = h2b
-	end
+	#opts.on('-b', '--hex2bin HEX_STRING', "Convert Hex shellcode to binary file.") 		do |h2b|
+	#  options[:hex2bin] = h2b
+	#end
 	#--> bin to Hex
 	opts.on('-x', '--bin2hex BINARY_FILE', "Convert binary shellcode to Hex string.") 	do |bin2hex|
 	  options[:bin2hex] = bin2hex
 	end
-	#--> Version
-	opts.on('-V', '--version', 'Display BufferOver flow Kit version.')			do |v|
-	  options[:version] = v
-	end
+	--> Version
+	#opts.on('-V', '--version', 'Display Buffer Overflow Kit version.')			do |v|
+	#  options[:version] = v
+	#end
 	#--> Help screen
 	opts.banner = "\nUsage:".underline 						+
 		" ruby bofk-cli.rb {OPTIONS} ARGUMENT\n" 				+
