@@ -4,8 +4,13 @@
 # https://github.com/KINGSABRI/BufferOverflow-Kit
 #
 
-require '../gems/colorize-0.5.8/lib/colorize'
-require '../lib/utils'
+APP_ROOT	= Dir.pwd
+
+puts APP_ROOT
+puts ""
+
+require "#{APP_ROOT}/gems/colorize-0.5.8/lib/colorize"
+require "#{APP_ROOT}/lib/utils"
 
 # Utils
 decoration = BofKUtils::Decoration.new
