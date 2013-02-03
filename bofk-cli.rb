@@ -49,7 +49,7 @@ begin
 	opts.on('-x', '--bin2hex BINARY_FILE', "Convert binary shellcode to Hex string.") 	do |bin2hex|
 	  options[:bin2hex] = bin2hex
 	end
-	--> Version
+	#--> Version
 	#opts.on('-V', '--version', 'Display Buffer Overflow Kit version.')			do |v|
 	#  options[:version] = v
 	#end
