@@ -8,8 +8,8 @@ https://github.com/KINGSABRI/BufferOverflow-Kit
 APP_ROOT	= Dir.pwd
 ROOT		= $:.unshift(File.join(APP_ROOT,'lib'))
 GEMS		= "#{APP_ROOT}/gems"
-BIN			= "#{APP_ROOT}/bin"
-OUT			= "#{APP_ROOT}/out"
+BIN		= "#{APP_ROOT}/bin"
+OUT		= "#{APP_ROOT}/out"
 VERSION 	= "0.0.4"
 
 require "#{GEMS}/colorize-0.5.8/lib/colorize.rb"
