@@ -10,7 +10,7 @@ ROOT		= $:.unshift(File.join(APP_ROOT,'lib'))
 GEMS		= "#{APP_ROOT}/gems"
 BIN			= "#{APP_ROOT}/bin"
 OUT			= "#{APP_ROOT}/out"
-
+VERSION 	= "0.0.4"
 
 require "#{GEMS}/colorize-0.5.8/lib/colorize.rb"
 require	'pattern'
@@ -50,23 +50,28 @@ begin
 	  options[:bin2hex] = bin2hex
 	end
 	#--> Version
-	#opts.on('-V', '--version', 'Display Buffer Overflow Kit version.')			do |v|
-	#  options[:version] = v
-	#end
+	opts.on('-v', '--version', 'Display Buffer Overflow Kit version.')			do |v|
+	  options[:version] = v
+	end
 	#--> Help screen
 	opts.banner = "\nUsage:".underline 						+
-		" ruby bofk-cli.rb {OPTIONS} ARGUMENT\n" 				+
-		"\nExamples:\n".underline						+
-		"ruby bofk-cli.rb --pattern-create 500\n" 				+
-		"ruby bofk-cli.rb --pattern-offset Aa4Z\n" 				+
-		"ruby bofk-cli.rb --hex2endl 0x41F2E377\n"				+
-		"ruby bofk-cli.rb --hex2bin input.txt output.bin\n" 			+
-		"ruby bofk-cli.rb --bin2hex input.bin\n\n"
+		" ruby bofk-cli.rb {OPTIONS} ARGUMENT\n\n"
 
-	opts.on( '-h', '--help', "Display this screen \n" ) 					do
-	  decor = decoration.decorate("Help screen")
+	opts.on( '-h', '--help', "Display help screen \n" ) 					do
+	  decor = decoration.decorate("Help screen.")
 	  puts "#{decor[:head]}".light_blue + "#{decor[:title]}".white + "#{decor[:tail]}".light_blue
 	  puts "#{opts}"
+
+	  puts "\nExternal tools - bin/\n".underline		+
+			   "[-] hex2bin.rb \t Hex to Binary file - BoFkit.\n"		+
+			   "[-] nasm.exe \t Assembler and disassembler.\n"		+
+			   "[-] mona.py \t Immunity debugger plugin - Corelan team.\n"
+
+	  puts "\nExamples:\n".underline						+
+			   "ruby bofk-cli.rb --pattern-create 500\n" 				+
+			   "ruby bofk-cli.rb --pattern-offset Aa4Z\n" 				+
+			   "ruby bofk-cli.rb --hex2endl 0x41F2E377\n"				+
+			   "ruby bofk-cli.rb --bin2hex input.bin\n\n"
 	  puts "#{decor[:end]}".light_blue
 	  exit
 	end
@@ -135,7 +140,10 @@ begin
 
 	#--> Version
 	when options[:version]
-	  puts "You should include lib/version.rb file"
+	  decor = decoration.decorate("BoFKit Version")
+	  puts "#{decor[:head]}".light_blue + "#{decor[:title]}".white + "#{decor[:tail]}".light_blue
+	  puts "#{VERSION}"
+	  puts "#{decor[:end]}".light_blue
 
 	else
 	  decor = decoration.decorate("Help screen")
