@@ -20,6 +20,7 @@ require 'bin2hex'
 require 'optparse'
 require 'pp'
 require 'utils'
+require 'banner'
 
 # Utils
 decoration = BofKUtils::Decoration.new
