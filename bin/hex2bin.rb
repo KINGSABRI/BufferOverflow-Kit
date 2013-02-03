@@ -6,9 +6,6 @@
 
 APP_ROOT	= Dir.pwd
 
-puts APP_ROOT
-puts ""
-
 require "#{APP_ROOT}/gems/colorize-0.5.8/lib/colorize"
 require "#{APP_ROOT}/lib/utils"
 
