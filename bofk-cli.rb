@@ -70,7 +70,7 @@ begin
 	  puts "\nExamples:\n".underline						+
 			   "ruby bofk-cli.rb --pattern-create 500\n" 			+
 			   "ruby bofk-cli.rb --pattern-offset Aa4Z\n" 			+
-			   "ruby bofk-cli.rb --hex2endl 0x41F2E377\n"			+
+			   "ruby bofk-cli.rb --hex2lend 0x41F2E377\n"			+
 			   "ruby bofk-cli.rb --bin2hex input.bin\n\n"
 	  puts "#{decor[:end]}".light_blue
 	  exit
