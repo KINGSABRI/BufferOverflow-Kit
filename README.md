@@ -48,7 +48,7 @@ Tested on Ruby 1.9.3 only
 	Examples:
 	ruby bofk-cli.rb --pattern-create 500
 	ruby bofk-cli.rb --pattern-offset Aa4Z
-	ruby bofk-cli.rb --hex2endl 0x41F2E377
+	ruby bofk-cli.rb --hex2lend 0x41F2E377
 	ruby bofk-cli.rb --bin2hex input.bin 
 
 **Pattern create**
