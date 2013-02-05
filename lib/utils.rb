@@ -66,14 +66,14 @@ class BofKUtils
 	def sanitize (string)
 	  case
 		when string.include?('0x') #== false
-		then
-		  string.gsub(/0x/, "")		# Sanitize "0x77d6b141" format
+		  string = string.gsub(/0x/, "")		# Sanitize "0x77d6b141" format
 		when string.include?("\\x")
-		then
-		  string.gsub(/[\\x]/, "")		# Sanitize "\x77\xd6\xb1\x41" format
+		  string = string.gsub(/[\\x]/, "")		# Sanitize "\x77\xd6\xb1\x41" format
 		when string.include?('x')
 		then
-		  string.gsub(/[\\x]/, "")		# Sanitize "\x77\xd6\xb1\x41" format
+		  string = string.gsub(/[\\x]/, "")		# Sanitize "\x77\xd6\xb1\x41" format
+		else
+		  return string
 	  end
 	end
 
