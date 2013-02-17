@@ -27,29 +27,30 @@ Tested on Ruby 1.9.3 only
 
 
 
-
 **Help**
 
-	Usage: ruby bofk-cli.rb {OPTIONS} ARGUMENT
+Usage: ruby bofk-cli.rb {OPTIONS} ARGUMENT
 
-	Help menu:
-		-c, --pattern-create LENGTH      Create Unique pattern string.
-		-o, --pattern-offset OFFSET      Find Pattern offset string.
-		-e, --hex2lend OPCODE            Convert Hex to little endian characters.
-		-x, --bin2hex BINARY_FILE        Convert binary shellcode to Hex string.
-		-v, --version                    Display Buffer Overflow Kit version.
-		-h, --help                       Display help screen 
+Help menu:
+    -c, --pattern-create LENGTH      Create Unique pattern string.
+    -o, --pattern-offset OFFSET      Find Pattern offset string.
+    -l, --pattern-length LENGTH      Only used with 'pattern-offset' if pattern was longer than 20280.
+    -e, --hex2lend OPCODE            Convert Hex to little endian characters.
+    -x, --bin2hex BINARY_FILE        Convert binary shellcode to Hex string.
+    -v, --version                    Display Buffer Overflow Kit version.
+    -h, --help                       Display help screen 
 
-	External tools - bin/
-	[-] hex2bin.rb   Hex to Binary file - BoFkit.
-	[-] nasm.exe     Assembler and disassembler.
-	[-] mona.py      Immunity debugger plugin - Corelan team.
+External tools - bin/
+[-] hex2bin.rb   Hex to Binary file - BoFkit.
+[-] nasm.exe     Assembler and disassembler.
+[-] mona.py      Immunity debugger plugin - Corelan team.
 
-	Examples:
-	ruby bofk-cli.rb --pattern-create 500
-	ruby bofk-cli.rb --pattern-offset Aa4Z
-	ruby bofk-cli.rb --hex2lend 0x41F2E377
-	ruby bofk-cli.rb --bin2hex input.bin 
+Examples:
+ruby bofk-cli.rb --pattern-create 500
+ruby bofk-cli.rb --pattern-offset Aa4Z
+ruby bofk-cli.rb --pattern-offset Zu2Z --pattern-length 40000
+ruby bofk-cli.rb --hex2lend 0x41F2E377
+ruby bofk-cli.rb --bin2hex input.bin
 
 **Pattern create**
 
