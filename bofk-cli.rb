@@ -134,7 +134,7 @@ begin
 	  #p options[:hex2bin]
 	  #@hex2bin.shellcode(options[:hex2bin])
 	  #@hex2bin.to_bin
-	  puts "This function is not working currently!"
+	  puts "This function moved to bin/hex2bin.rb as external tool"
 	  puts "#{decor[:end]}".light_blue
 	  puts ""
 	  exit
