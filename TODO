@@ -1,16 +1,17 @@
 ==================================================================================================
-	    Todo			|	Status		|	Comments
+	    Todo				|	 Status		|	Comments
 ==================================================================================================
 
-[+] Pattern					DONE
+[+] Pattern						DONE
   - pattern create				DONE 
   - pattern offset				DONE
 
-[+] Little endian characters 			DONE
+[+] Little endian characters 	DONE
 
 [+] Hex 2 bin					progress		issue: take "\x41" from stdin as it-is. moved to bin/ as external tool
 
-[+] Bin 2 hex					DONE			I need to add file check, later 
+[+] Bin 2 hex					DONE			I need to add file check, later
+  - Add extra option: type      DONE 			support ruby, perl, python, c output format
 
 [+] msfpescan  					pending			metasm/msfpescan
 https://github.com/rapid7/metasploit-framework/blob/master/msfpescan
@@ -19,7 +20,7 @@ https://github.com/rapid7/metasploit-framework/blob/master/data/msfpescan/identi
 https://github.com/rapid7/metasploit-framework/tree/master/lib/metasm
 https://github.com/jjyg/metasm
 
-[+] nasm					pending			add nasm.exe as a tool to compile asm files 
+[+] nasm						pending			add nasm.exe as a tool to compile asm files 
 
 [+] Colorize outputs				DONE			
 
