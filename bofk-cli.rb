@@ -55,7 +55,7 @@ begin
 	  options[:bin2hex] = bin2hex
 	end
 	#--> bin to Hex: Format type
-	opts.on('-t', '--type TYPE', "Only used with 'bin2hex'. Types: ruby, perl, python, c.") 	do |type|
+	opts.on('-t', '--type TYPE', "Only used with 'bin2hex'. Types: ruby, perl, python, c.") do |type|
 	  options[:type] = type
 	end
 	#--> Version
@@ -63,7 +63,7 @@ begin
 	  options[:version] = v
 	end
 	#--> Help screen
-	opts.banner = "\nUsage:".underline 						+
+	opts.banner = "\nUsage:".underline 						     +
 		" ruby bofk-cli.rb {OPTIONS} ARGUMENT\n\n"
 
 	opts.on( '-h', '--help', "Display help screen \n" ) 					do
@@ -71,16 +71,16 @@ begin
 	  puts "#{decor[:head]}".light_blue + "#{decor[:title]}".white + "#{decor[:tail]}".light_blue
 	  puts "#{opts}"
 
-	  puts "\nExternal tools - bin/\n".underline		+
-			   "[-] hex2bin.rb \t Hex to Binary file - BoFkit.\n"		+
-			   "[-] nasm.exe \t Assembler and disassembler.\n"		+
+	  puts "\nExternal tools - bin/\n".underline		                             +
+			   "[-] hex2bin.rb \t Hex to Binary file - BoFkit.\n"		     +
+			   "[-] nasm.exe \t Assembler and disassembler.\n"		     +
 			   "[-] mona.py \t Immunity debugger plugin - Corelan team.\n"
 
-	  puts "\nExamples:\n".underline						+
-			   "ruby bofk-cli.rb --pattern-create 500\n" 			+
-			   "ruby bofk-cli.rb --pattern-offset Aa4Z\n" 			+
-			   "ruby bofk-cli.rb --pattern-offset Zu2Z --pattern-length 40000\n" 			+
-			   "ruby bofk-cli.rb --hex2lend 0x41F2E377\n"			+
+	  puts "\nExamples:\n".underline						     +
+			   "ruby bofk-cli.rb --pattern-create 500\n" 			     +
+			   "ruby bofk-cli.rb --pattern-offset Aa4Z\n" 			     +
+			   "ruby bofk-cli.rb --pattern-offset Zu2Z --pattern-length 40000\n" +
+			   "ruby bofk-cli.rb --hex2lend 0x41F2E377\n"			     +
 			   "ruby bofk-cli.rb --bin2hex input.bin\n\n"
 	  puts "#{decor[:end]}".light_blue
 	  exit
@@ -150,10 +150,10 @@ begin
 	  puts "#{decor[:head]}".light_blue + "#{decor[:title]}".white + "#{decor[:tail]}".light_blue
 	  @bin2hex.read(options[:bin2hex])
 	  puts mark[:+] + "File Size:".white.underline + " #{File.size(options[:bin2hex])} bytes.".white
-	  	  if options[:type] == nil
-		  type = "No format specified."
+	  if options[:type] == nil
+		type = "No format specified."
 	  else
-		  type = options[:type]
+		type = options[:type]
 	  end
 	  puts mark[:+] + "Format type:".white.underline + " #{type} \n".white
 	  puts "#{@bin2hex.to_hex(options[:type])}".light_cyan
