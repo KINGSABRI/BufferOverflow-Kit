@@ -38,7 +38,7 @@ Tested on Ruby 1.9.3 only
 		-l, --pattern-length LENGTH      Only used with 'pattern-offset' if pattern was longer than 20280.
 		-e, --hex2lend OPCODE            Convert Hex to little endian characters.
 		-x, --bin2hex BINARY_FILE        Convert binary shellcode to Hex string.
-		-t, --type TYPE                  Only used with 'bin2hex'. Types: ruby, perl, python, c.
+		-t, --type TYPE                  Used with 'bin2hex' & 'pattern-create'. Types: ruby, perl, python, c.
 		-v, --version                    Display Buffer Overflow Kit version.
 		-h, --help                       Display help screen 
 
@@ -55,9 +55,20 @@ Tested on Ruby 1.9.3 only
 	ruby bofk-cli.rb --bin2hex input.bin 
 
 **Pattern create**
+Without output format
 
-	bofk-cli.rb --pattern-create 50
-	Aa0AAa0BAa0CAa0DAa0EAa0FAa0GAa0HAa0IAa0JAa0KAa0LAa
+	bofk-cli.rb --pattern-create 400
+	Aa0Aa1Aa2Aa3Aa4Aa5Aa6Aa7Aa8Aa9Ab0Ab1Ab2Ab3Ab4Ab5Ab6Ab7Ab8Ab9Ac0Ac1Ac2Ac3Ac4Ac5Ac6Ac7Ac8Ac9Ad0Ad1Ad2Ad3Ad4Ad5Ad6Ad7Ad8Ad9Ae0Ae1Ae2Ae3Ae4Ae5Ae6Ae7Ae8Ae9Af0Af1Af2Af3Af4Af5Af6Af7Af8Af9Ag0Ag1Ag2Ag3Ag4Ag5Ag6Ag7Ag8Ag9Ah0Ah1Ah2Ah3Ah4Ah5Ah6Ah7Ah8Ah9Ai0Ai1Ai2Ai3Ai4Ai5Ai6Ai7Ai8Ai9Aj0Aj1Aj2Aj3Aj4Aj5Aj6Aj7Aj8Aj9Ak0Ak1Ak2Ak3Ak4Ak5Ak6Ak7Ak8Ak9Al0Al1Al2Al3Al4Al5Al6Al7Al8Al9Am0Am1Am2Am3Am4Am5Am6Am7Am8Am9An0An1An2A
+
+Support output format (Available formats: Ruby, Perl, Python, C)
+
+	bofk-cli.rb --pattern-create 200 --type perl
+	
+	"Aa0Aa1Aa2Aa3Aa4Aa5Aa6Aa7Aa8Aa9Ab0Ab1Ab2Ab3Ab4Ab5Ab6Ab7Ab8Ab9Ac0Ac1Ac2Ac3Ac4Ac5Ac6Ac7Ac8Ac9Ad0Ad1Ad2A" .
+	"d3Ad4Ad5Ad6Ad7Ad8Ad9Ae0Ae1Ae2Ae3Ae4Ae5Ae6Ae7Ae8Ae9Af0Af1Af2Af3Af4Af5Af6Af7Af8Af9Ag0Ag1Ag2Ag3Ag4Ag5Ag" .
+	"6Ag7Ag8Ag9Ah0Ah1Ah2Ah3Ah4Ah5Ah6Ah7Ah8Ah9Ai0Ai1Ai2Ai3Ai4Ai5Ai6Ai7Ai8Ai9Aj0Aj1Aj2Aj3Aj4Aj5Aj6Aj7Aj8Aj9" .
+	"Ak0Ak1Ak2Ak3Ak4Ak5Ak6Ak7Ak8Ak9Al0Al1Al2Al3Al4Al5Al6Al7Al8Al9Am0Am1Am2Am3Am4Am5Am6Am7Am8Am9An0An1An2A";
+	
 
 **Pattern offset**
 
