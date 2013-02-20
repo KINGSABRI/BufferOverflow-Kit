@@ -10,7 +10,7 @@ ROOT		= $:.unshift(File.join(APP_ROOT,'lib'))
 GEMS		= "#{APP_ROOT}/gems"
 BIN		= "#{APP_ROOT}/bin"
 OUT		= "#{APP_ROOT}/out"
-VERSION 	= "0.0.4"
+VERSION 	= "0.0.5"
 
 require "#{GEMS}/colorize-0.5.8/lib/colorize.rb"
 require	'pattern'
@@ -53,6 +53,10 @@ begin
 	#--> bin to Hex
 	opts.on('-x', '--bin2hex BINARY_FILE', "Convert binary shellcode to Hex string.") 	do |bin2hex|
 	  options[:bin2hex] = bin2hex
+	end
+	#--> bin to Hex: Format type
+	opts.on('-t', '--type TYPE', "Only used with 'bin2hex'. Types: ruby, perl, python, c.") 	do |type|
+	  options[:type] = type
 	end
 	#--> Version
 	opts.on('-v', '--version', 'Display Buffer Overflow Kit version.')			do |v|
@@ -97,7 +101,7 @@ begin
 	then
 	  decor = decoration.decorate("Pattern create")
 	  puts "#{decor[:head]}".light_blue + "#{decor[:title]}".white + "#{decor[:tail]}".light_blue
-	  puts mark[:+] + "Size: #{@pattern.create(options[:create]).size}\n".white.underline
+	  puts mark[:+] + "Size:".white.underline + " #{@pattern.create(options[:create]).size}\n".white
 	  puts "#{@pattern.create(options[:create])}".light_cyan
 	  puts "#{decor[:end]}".light_blue
 	  puts ""
@@ -108,8 +112,8 @@ begin
 	  offset = @pattern.offset(options[:offset], options[:pattern_length])
 	  decor = decoration.decorate("Pattern offset")
 	  puts "#{decor[:head]}".light_blue + "#{decor[:title]}".white + "#{decor[:tail]}".light_blue
-	  puts mark[:+] + "Actual pattern length: #{offset[:length]} chars.".white.underline
-	  puts mark[:+] + "Matches: #{offset[:offset].size} times.\n".white.underline
+	  puts mark[:+] + "Actual pattern length:".white.underline + " #{offset[:length]} chars.".white
+	  puts mark[:+] + "Matches:".white.underline + " #{offset[:offset].size} times.\n".white
 
 	  offset[:offset].each {|o| puts "#{o}".light_cyan}
 
@@ -145,8 +149,14 @@ begin
 	  decor = decoration.decorate("Binary to Hex")
 	  puts "#{decor[:head]}".light_blue + "#{decor[:title]}".white + "#{decor[:tail]}".light_blue
 	  @bin2hex.read(options[:bin2hex])
-	  puts mark[:+] + "File Size: #{File.size(options[:bin2hex])} byte.\n".white.underline
-	  puts "#{@bin2hex.to_hex}".light_cyan
+	  puts mark[:+] + "File Size:".white.underline + " #{File.size(options[:bin2hex])} bytes.".white
+	  	  if options[:type] == nil
+		  type = "No format specified."
+	  else
+		  type = options[:type]
+	  end
+	  puts mark[:+] + "Format type:".white.underline + " #{type} \n".white
+	  puts "#{@bin2hex.to_hex(options[:type])}".light_cyan
 	  puts "#{decor[:end]}".light_blue
 	  puts ""
 
