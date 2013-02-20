@@ -115,7 +115,7 @@ class BofKUtils
                                           if i != liner.last
                                             i << " +\n"
                                           else
-                                            i
+                                            i << ";"
                                           end
                                       end
                             end
