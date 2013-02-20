@@ -72,55 +72,55 @@ class BofKUtils
 			end
 
 			case
-				when type == "ruby"
-				  liner = liner.map do |i|
-							  if i != liner.last
-								i << " +\n"
-							  else
-								i
-							  end
-						  end
-				when type == "perl"
-				  liner = liner.map do |i|
-							  if i != liner.last
-								i << " .\n"
-							  else
-								i 
-							  end
-						  end
-				when type == "python"
-				  liner = liner.map do |i|
-							  if i != liner.last
-								i << " \n"
-							  else
-								i 
-							  end
-						  end
-				when type == "c"
-				  liner = liner.map do |i|
-							  if i != liner.last
-								i << " \n"
-							  else
-								i 
-							  end
-						  end
+                            when type == "ruby"
+                              liner = liner.map do |i|
+                                          if i != liner.last
+                                                i << " +\n"
+                                          else
+                                                i
+                                          end
+                                      end
+                            when type == "perl"
+                              liner = liner.map do |i|
+                                          if i != liner.last
+                                                i << " .\n"
+                                          else
+                                                i 
+                                          end
+                                      end
+                            when type == "python"
+                              liner = liner.map do |i|
+                                          if i != liner.last
+                                                i << " \n"
+                                          else
+                                                i 
+                                          end
+                                      end
+                            when type == "c"
+                              liner = liner.map do |i|
+                                          if i != liner.last
+                                                i << " \n"
+                                          else
+                                                i 
+                                          end
+                                      end
 
-			  	else                  # TODO should rise an error unknown format [Ruby default]
+                            else                  # TODO should rise an error unknown format [Ruby default]
 
-				puts "#{mark[:!]}" + "Error: Unknown #{type} type."
-				puts "Default type (ruby) will be used. \n\r"
-				sleep 2
+                              puts "#{mark[:!]}" + "Error: Unknown #{type} type."
+                              puts "Default type (ruby) will be used. \n\r"
+                              sleep 2
 
-				  liner = liner.map do |i|
-								if i != liner.last
-								  i << " +\n"
-								else
-								  i #= i
-								end
-						  end
-				end
+                              liner = liner.map do |i|
+                                          if i != liner.last
+                                            i << " +\n"
+                                          else
+                                            i #= i
+                                          end
+                                      end
+                            end
 
-			return liner
+                  return liner
 
 		  end
 
