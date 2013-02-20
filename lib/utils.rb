@@ -77,7 +77,7 @@ class BofKUtils
                                           if i != liner.last
                                                 i << " +\n"
                                           else
-                                                i
+                                                i << ""
                                           end
                                       end
                             when type == "perl"
@@ -85,7 +85,7 @@ class BofKUtils
                                           if i != liner.last
                                                 i << " .\n"
                                           else
-                                                i 
+                                                i << ";"
                                           end
                                       end
                             when type == "python"
@@ -93,7 +93,7 @@ class BofKUtils
                                           if i != liner.last
                                                 i << " \n"
                                           else
-                                                i 
+                                                i << ""
                                           end
                                       end
                             when type == "c"
@@ -101,7 +101,7 @@ class BofKUtils
                                           if i != liner.last
                                                 i << " \n"
                                           else
-                                                i 
+                                                i << ";"
                                           end
                                       end
 
@@ -115,7 +115,7 @@ class BofKUtils
                                           if i != liner.last
                                             i << " +\n"
                                           else
-                                            i #= i
+                                            i
                                           end
                                       end
                             end

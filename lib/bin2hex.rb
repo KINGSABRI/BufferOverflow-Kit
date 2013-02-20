@@ -47,7 +47,7 @@ class Bin2Hex
 			  if l != formatted.last
 				holder << "\"#{l[0..-2].join}\"" + l.last
 			  else
-				holder << "\"#{l.join}\""
+				holder << "\"#{l[0..-2].join}\"" + l.last
 			  end
 		  end
 
