@@ -37,9 +37,11 @@ Tested on Ruby 1.9.3 only
 		-o, --pattern-offset OFFSET      Find Pattern offset string.
 		-l, --pattern-length LENGTH      Only used with 'pattern-offset' if pattern was longer than 20280.
 		-e, --hex2lend OPCODE            Convert Hex to little endian characters.
+		-b, --hex2bin                    Convert Hex shellcode to binary file.
 		-x, --bin2hex BINARY_FILE        Convert binary shellcode to Hex string.
 		-t, --type TYPE                  Used with 'bin2hex' & 'pattern-create'. Types: ruby, perl, python, c.
 		-v, --version                    Display Buffer Overflow Kit version.
+		-u, --update					 Update Buffer Overflow Kit.
 		-h, --help                       Display help screen 
 
 	External tools - bin/
@@ -52,7 +54,9 @@ Tested on Ruby 1.9.3 only
 	ruby bofk-cli.rb --pattern-offset Aa4Z
 	ruby bofk-cli.rb --pattern-offset Zu2Z --pattern-length 40000
 	ruby bofk-cli.rb --hex2lend 0x41F2E377
-	ruby bofk-cli.rb --bin2hex input.bin 
+	ruby bofk-cli.rb --hex2bin
+	ruby bofk-cli.rb --bin2hex input.bin
+
 
 **Pattern create**
 Without output format
@@ -118,3 +122,18 @@ Support output format (Available formats: Ruby, Perl, Python, C)
 	"\xe8\xe9\x8d\x9c\x88\x16\x44\x25\xb8\x5c\xc4\x0c\x51\x39\x9d" +
 	"\x0c\x3c\xba\x48\x52\x39\x39\x78\x2b\xbe\x21\x09\x2e\xfa\xe5" +
 	"\xe2\x42\x93\x83\x04\xf0\x94\x81"
+
+
+**Convert Binary file to hex string**
+You paste use any kind of fromat (Ruby, Perl, Python, C) 
+
+	ruby bofk-cli.rb --hex2bin
+	
+	# Outputs
+	[+] Paste your shellcode then press ctrl+x
+	
+	[+] Hex string has been saved in file name: .shellcode.txt
+	
+	[+] Binary file name:  shellcode
+	[+] Binary file size:  368 bytes.
+
