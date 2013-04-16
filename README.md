@@ -125,7 +125,8 @@ Support output format (Available formats: Ruby, Perl, Python, C)
 
 
 **Convert Binary file to hex string**
-You paste use any kind of fromat (Ruby, Perl, Python, C) 
+
+You can paste use any kind of fromat (Ruby, Perl, Python, C) 
 
 	ruby bofk-cli.rb --hex2bin
 	
