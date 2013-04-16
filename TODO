@@ -8,7 +8,7 @@
 
 [+] Little endian characters 	DONE
 
-[+] Hex 2 bin					progress		issue: take "\x41" from stdin as it-is. moved to bin/ as external tool
+[+] Hex 2 bin					DONE
 
 [+] Bin 2 hex					DONE			I need to add file check, later
   - Add extra option: type      DONE 			support ruby, perl, python, c output format
@@ -24,6 +24,7 @@ https://github.com/jjyg/metasm
 
 [+] Colorize outputs				DONE			
 
+[+] Add Update switch				DONE
 
 
 
