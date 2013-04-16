@@ -17,7 +17,6 @@ class Hex2Bin
 	#
         def hex_shellcode
 			file = ".shellcode.txt"
-			#File.rename("#{file}" , ".shellcode-#{Random.rand(1...100)}.txt") if File.exist?("#{file}")
 			File.rename("#{file}" , ".shellcode-#{Time.new.strftime("%Y-%m-%d__%H:%M:%S")}.txt") if File.exist?("#{file}")
 
 			puts @mark[:+] + "Paste your shellcode then press ctrl+x\n"
