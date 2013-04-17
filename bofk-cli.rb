@@ -10,7 +10,7 @@ ROOT		= $:.unshift(File.join(APP_ROOT,'lib'))
 GEMS		= "#{APP_ROOT}/gems"
 BIN		= "#{APP_ROOT}/bin"
 OUT		= "#{APP_ROOT}/out"
-VERSION 	= File.read("#{ROOT[0]/version.rb}")
+VERSION 	= File.read("#{ROOT[0]}/version.rb")
 
 require "#{GEMS}/colorize-0.5.8/lib/colorize.rb"
 require	'pattern'
