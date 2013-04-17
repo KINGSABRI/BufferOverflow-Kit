@@ -6,7 +6,7 @@ If you are a buffer overflow guy, then may you like to contribute and develop wi
 
 What BufferOverflow Kit contain?
 ---------------------------------
-* Commandline and Console base.
+* Commandline base.
 * pattern create (like metasploit pattern_create script)
 * pattern offset (like metasploit pattern_offset script)
 * Hex to Little endian chracter (ex. \x41\x\42\x\43\x44 to \x44\x43\x42\x41)
